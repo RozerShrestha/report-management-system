@@ -43,7 +43,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Welcome to your profile</a></li>
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Help</a></li>
@@ -77,165 +77,230 @@
                                         <ul style="list-style-type: none;">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM1st</a></li>
+                                                     <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                                        BIM1st
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse1" class="panel-collapse collapse in">
+
+                                                                <ul style="list-style-type: none;">
+
+                                                                    <h4 class="panel-title">
+                                                                        <li><a href="#">sec A</a></li>                                       
+                                                                        <li><a href="#">Sec B</a></li>
+                                                                    </h4>
+
+
+
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                        </div>
                                                 </h4>
                                             </div>
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM2nd</a></li>
+                                                     <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                                        BIM2nd
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse2" class="panel-collapse collapse in">
+
+                                                                <ul style="list-style-type: none;">
+
+                                                                    <h4 class="panel-title">
+                                                                        <li><a href="#">sec A</a></li>                                       
+                                                                        <li><a href="#">Sec B</a></li>
+                                                                    </h4>
+
+
+
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                     <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                                        BIM3rd
+                                                                    </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapse3" class="panel-collapse collapse in">
+
+                                                                <ul style="list-style-type: none;">
+
+                                                                    <h4 class="panel-title">
+                                                                        <li><a href="#">sec A</a></li>                                       
+                                                                        <li><a href="#">Sec B</a></li>
+                                                                    </h4>
+
+
+
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <li><a href="#">BIM4th</a></li>
                                                 </h4>
                                             </div>
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM3rd</a></li>
+                                                    <li><a href="#">BIM5th</a></li>
                                                 </h4>
                                             </div>
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM4th</a></li>
+                                                    <li><a href="#">BIM6th</a></li>
                                                 </h4>
                                             </div>
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM5th</a></li>
+                                                    <li><a href="#">BIM7th</a></li>
                                                 </h4>
                                             </div>
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                <li><a href="#">BIM6th</a></li>
+                                                    <li><a href="#">BIM8th</a></li>
                                                 </h4>
                                             </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BIM7th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BIM8th</a></li>
-                                                </h4>
-                                            </div>
-                                            
+
                                         </ul>
 
                                     </div>
                                 </div>
                             </div></li>
-                        <li> <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                            BBA
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul style="list-style-type: none;">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA1st</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA2nd</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA3rd</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA4th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA5th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA6th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA7th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BBA8th</a></li>
-                                                </h4>
-                                            </div>
-                                            
-                                        </ul>
+<!--                                                <li> <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                                    BBA
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="panel-collapse collapse in">
+                                                            <div class="panel-body">
+                                                                <ul style="list-style-type: none;">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA1st</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA2nd</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA3rd</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA4th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA5th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA6th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA7th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BBA8th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    
+                                                                </ul>
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div></li>
+                                                <li> <div class="panel panel-default">
+                                                        <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                                                    BSCCSIT
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="panel-collapse collapse in">
+                                                            <div class="panel-body">
+                                                                <ul style="list-style-type: none;">
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT1st</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT2nd</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT3rd</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT4th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT5th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT6th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT7th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="panel-heading">
+                                                                        <h4 class="panel-title">
+                                                                        <li><a href="#">BSCCSIT8th</a></li>
+                                                                        </h4>
+                                                                    </div>
+                                                                    
+                                                                </ul>
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div></li>-->
 
-                                    </div>
-                                </div>
-                            </div></li>
-                        <li> <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                            BSCCSIT
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <ul style="list-style-type: none;">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT1st</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT2nd</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT3rd</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT4th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT5th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT6th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT7th</a></li>
-                                                </h4>
-                                            </div>
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                <li><a href="#">BSCCSIT8th</a></li>
-                                                </h4>
-                                            </div>
-                                            
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div></li>
-                            
 
                     </ul>
 
