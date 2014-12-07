@@ -8,6 +8,7 @@ body {
   max-width: 350px;
   padding: 15px;
   margin: 0 auto;
+  alignment-adjust: baseline;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {

@@ -5,55 +5,61 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<html lang="en" class="no-js">
 
-    <title>Login Report Management System</title>
+    <head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <!-- Custom styles for this template -->
-    <link href="assets/css/signin.css" rel="stylesheet" type="text/css"/>
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+        <meta charset="utf-8">
+        <title>Fullscreen Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-  <body>
+        <!-- CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/supersized.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
-    <div class="container">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-      <form class="form-signin" role="form">
-        <h2 class="form-signin-heading">Login</h2>
-        <input type="email" class="form-control" placeholder="Email address" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+    </head>
 
-    </div> <!-- /container -->
+    <body>
+        <div class="page-header">
+           <h1><center>Report Management System</center></h1>
+        </div>
+       
+        <div class="page-container">
+            <h1>Sign in</h1>
+            <form action="" method="post">
+                <input type="text" name="username" class="username" placeholder="Username">
+                <input type="password" name="password" class="password" placeholder="Password">
+		
+                <h1><button type="submit">Sign me in</button></h1>
+                <div class="error"><span>+</span></div>
+            </form>
+            
+        </div>
+        <div class="checkbox activeslide">
+                
+                    <input type="checkbox" value="remember-me"> Remember me
+        </div>
 
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="assets/js/supersized.3.2.7.min.js"></script>
+        <script src="assets/js/supersized-init.js"></script>
+        <script src="assets/js/scripts.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  </body>
+    </body>
+
 </html>
+
+
