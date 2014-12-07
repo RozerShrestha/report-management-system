@@ -57,7 +57,20 @@
             <div class="row">
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
-                        
+                        <li><div class="btn-group">
+  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div> </li>
                         
                         <li> <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -701,8 +714,7 @@
         <!-- Placed at the end of the document so the pages load faster -->
         
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-        <script src="assets/js/transition.js" type="text/javascript"></script>
-        <script src="assets/js/collapse.js" type="text/javascript"></script>
-        <script src="assets/js/dropdown.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
     </body>
 </html>
