@@ -10,18 +10,18 @@ package com.ReportManagementSystem.entities;
  *
  * @author Rozer
  */
-public class TeacherInfo {
+public class Teacher {
     private int teacherId;
     private String teacherName;
     private String teacherFaculty;
     private String teacherSubject;
     
-    public TeacherInfo()
+    public Teacher()
     {
         
     }
 
-    public TeacherInfo(int teacherId, String teacherName, String teacherFaculty, String techerSubject) {
+    public Teacher(int teacherId, String teacherName, String teacherFaculty, String techerSubject) {
         this.teacherId = teacherId;
         this.teacherName = teacherName;
         this.teacherFaculty = teacherFaculty;

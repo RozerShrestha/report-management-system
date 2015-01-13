@@ -10,15 +10,15 @@ package com.ReportManagementSystem.entities;
  *
  * @author Rozer
  */
-public class ManagementInfo {
+public class Management {
     private int mgmtId;
     private String mgmtName;
     private String mgmtPost;
 
-    public ManagementInfo() {
+    public Management() {
     }
 
-    public ManagementInfo(int mgmtId, String mgmtName, String mgmtPost) {
+    public Management(int mgmtId, String mgmtName, String mgmtPost) {
         this.mgmtId = mgmtId;
         this.mgmtName = mgmtName;
         this.mgmtPost = mgmtPost;

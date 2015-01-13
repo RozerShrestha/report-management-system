@@ -3,9 +3,10 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import com.ReportManagementSystem.Db.DBConnection;
 import java.sql.*;
 
-public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class LoginDb_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -44,6 +45,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("service\n");
       out.write("\n");
 
@@ -54,17 +58,16 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost/reportmanagementsystem", "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
-    System.out.println(user);
 
     System.out.println(con);
 
-    String sql = "select *from login where UserName='" + user + "'and position='"+pos+"' and Password='" + pass + "'";
+    String sql = "select *from login where UserName='" + user + "'and Password='" + pass + "'";
 
     rs = st.executeQuery(sql);
     if (rs.next()) {
         out.println("success");
-//        session.setAttribute("userid",user);
-        response.sendRedirect("managmentDashboard.jsp");
+        session.setAttribute("userid",user);
+        response.sendRedirect("success.jsp");
 
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");

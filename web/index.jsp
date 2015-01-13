@@ -4,12 +4,14 @@
     Author     : Rozer
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html lang="en" class="no-js">
 
-    <head>
 
         <meta charset="utf-8">
         <title>Fullscreen Login</title>
@@ -23,33 +25,26 @@
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/supersized.css">
         <link rel="stylesheet" href="assets/css/style.css">
+  
 
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body>
-        <div class="page-header">
-           <h1><center>Report Management System</center></h1>
+        <div class="page-header" >
+            <h1><center>Report Management System</center></h1>
         </div>
-       
         <div class="page-container">
-            <h1>Sign in</h1>
-            <form action="" method="post">
+            <h1>Login</h1>
+            <form name="loginform" action="login.jsp" method="post">
                 <input type="text" name="username" class="username" placeholder="Username">
+                <br><br>
+                <select name="position" style="color:#f0ad4e">
+                    <option value="management" style="color: #000000">Management</option>
+                    <option value="teacher" style="color: #000000">Teacher</option>
+                    <option value="student" style="color: #000000">Student</option>
+                </select>
                 <input type="password" name="password" class="password" placeholder="Password">
-		
                 <h1><button type="submit">Sign me in</button></h1>
-                <div class="error"><span>+</span></div>
+
+
             </form>
-            
-        </div>
-        <div class="checkbox activeslide">
-                
-                    <input type="checkbox" value="remember-me"> Remember me
         </div>
 
         <!-- Javascript -->
@@ -58,8 +53,6 @@
         <script src="assets/js/supersized-init.js"></script>
         <script src="assets/js/scripts.js"></script>
 
-    </body>
-
-</html>
+    
 
 
