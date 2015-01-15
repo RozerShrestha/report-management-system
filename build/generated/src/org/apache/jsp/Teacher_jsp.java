@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class managmentDashboard_005f1_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Teacher_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -71,7 +71,7 @@ public final class managmentDashboard_005f1_jsp extends org.apache.jasper.runtim
       out.write("    <body>\n");
       out.write("\n");
       out.write("        <div class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n");
-      out.write("            <!--<div class=\"container-fluid\">-->\n");
+      out.write("            <div class=\"container-fluid\">\n");
       out.write("                <div class=\"navbar-header\">\n");
       out.write("                    <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n");
       out.write("                        <span class=\"sr-only\">Toggle navigation</span>\n");
@@ -83,7 +83,7 @@ public final class managmentDashboard_005f1_jsp extends org.apache.jasper.runtim
       out.write("                </div>\n");
       out.write("                <div class=\"navbar-collapse collapse\">\n");
       out.write("                    <ul class=\"nav navbar-nav navbar-right\">\n");
-      out.write("                        <li><a href=\"#\">Welcome teacher</a></li>\n");
+      out.write("                        <li><a href=\"#\">Welcome Teacher</a></li>\n");
       out.write("                        <li><a href=\"#\">Logout</a></li>\n");
       out.write("\n");
       out.write("                    </ul>\n");

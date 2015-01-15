@@ -54,7 +54,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     Connection con = DriverManager.getConnection("jdbc:mysql://localhost/reportmanagementsystem", "root", "");
     Statement st = con.createStatement();
     ResultSet rs;
-    System.out.println(user);
+    //System.out.println(user);
 
     System.out.println(con);
 
@@ -63,8 +63,16 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     rs = st.executeQuery(sql);
     if (rs.next()) {
         out.println("success");
-//        session.setAttribute("userid",user);
-        response.sendRedirect("managmentDashboard.jsp");
+        session.setAttribute("userId",user);
+        session.getAttribute(user);
+        if (pos.equals("management"))
+             response.sendRedirect("Teacher.jsp");
+        //response.sendRedirect("managmentDashboard.jsp");
+        //if(pos=="student")
+         //response.sendRedirect("studentDashboard.jsp"); 
+        //if(pos=="teacher")
+           
+        
 
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");

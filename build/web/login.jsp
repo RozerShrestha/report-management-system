@@ -19,8 +19,16 @@ service
     rs = st.executeQuery(sql);
     if (rs.next()) {
         out.println("success");
-//        session.setAttribute("userid",user);
-        response.sendRedirect("managmentDashboard.jsp");
+        session.setAttribute("userId",user);
+        session.getAttribute(user);
+        if (pos.equals("management"))
+             response.sendRedirect("managmentDashboard.jsp");
+        if(pos.equals("student"))
+            response.sendRedirect("studentDashboard.jsp"); 
+        if(pos.equals("teacher"))
+            response.sendRedirect("teacherDashboard.jsp");
+           
+        
 
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");

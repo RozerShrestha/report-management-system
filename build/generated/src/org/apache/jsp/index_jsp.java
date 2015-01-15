@@ -90,7 +90,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </form>\n");
       out.write("        </div>\n");
       out.write("\n");
-      out.write("        <!-- Javascript -->\n");
+      out.write("        \n");
       out.write("        <script src=\"assets/js/jquery-1.8.2.min.js\"></script>\n");
       out.write("        <script src=\"assets/js/supersized.3.2.7.min.js\"></script>\n");
       out.write("        <script src=\"assets/js/supersized-init.js\"></script>\n");
