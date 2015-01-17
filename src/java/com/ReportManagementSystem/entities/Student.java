@@ -13,6 +13,7 @@ package com.ReportManagementSystem.entities;
 public class Student {
     private int Id;
     private String Name;
+    private String Subject;
     private String Class;
     private int roll;
     private int assignment;
@@ -25,9 +26,10 @@ public class Student {
     public Student() {
     }
 
-    public Student(int Id, String Name, String Class, int roll, int assignment, int report, int midterm, int presentation, int preboard, int total) {
+    public Student(int Id, String Name, String Subject, String Class, int roll, int assignment, int report, int midterm, int presentation, int preboard, int total) {
         this.Id = Id;
         this.Name = Name;
+        this.Subject = Subject;
         this.Class = Class;
         this.roll = roll;
         this.assignment = assignment;
@@ -44,6 +46,10 @@ public class Student {
 
     public String getName() {
         return Name;
+    }
+
+    public String getSubject() {
+        return Subject;
     }
 
     public String getclass() {
@@ -86,7 +92,11 @@ public class Student {
         this.Name = Name;
     }
 
-    public void setclass(String Class) {
+    public void setSubject(String Subject) {
+        this.Subject = Subject;
+    }
+
+    public void setClass(String Class) {
         this.Class = Class;
     }
 
@@ -120,9 +130,8 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "Id=" + Id + ", Name=" + Name + ", Class=" + Class + ", roll=" + roll + ", assignment=" + assignment + ", report=" + report + ", midterm=" + midterm + ", presentation=" + presentation + ", preboard=" + preboard + ", total=" + total + '}';
+        return "Student{" + "Id=" + Id + ", Name=" + Name + ", Subject=" + Subject + ", Class=" + Class + ", roll=" + roll + ", assignment=" + assignment + ", report=" + report + ", midterm=" + midterm + ", presentation=" + presentation + ", preboard=" + preboard + ", total=" + total + '}';
     }
     
-    
+
 }
-    

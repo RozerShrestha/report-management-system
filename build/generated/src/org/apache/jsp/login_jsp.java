@@ -3,7 +3,10 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.Connection;
 
 public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -31,7 +34,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -44,45 +47,56 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("\n");
-      out.write("service\n");
-      out.write("\n");
-
-    String user = request.getParameter("username");
-    String pos= request.getParameter("position");
-    String pass = request.getParameter("password");
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost/reportmanagementsystem", "root", "");
-    Statement st = con.createStatement();
-    ResultSet rs;
-    //System.out.println(user);
-
-    System.out.println(con);
-
-    String sql = "select *from login where UserName='" + user + "'and position='"+pos+"' and Password='" + pass + "'";
-
-    rs = st.executeQuery(sql);
-    if (rs.next()) {
-        out.println("success");
-        session.setAttribute("userId",user);
-        session.getAttribute(user);
-        if (pos.equals("management"))
-             response.sendRedirect("Teacher.jsp");
-        //response.sendRedirect("managmentDashboard.jsp");
-        //if(pos=="student")
-         //response.sendRedirect("studentDashboard.jsp"); 
-        //if(pos=="teacher")
-           
-        
-
-    } else {
-        out.println("Invalid password <a href='index.jsp'>try again</a>");
-    }
-
-
       out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <meta charset=\"utf-8\">\n");
+      out.write("        <title>Fullscreen Login</title>\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("        <meta name=\"description\" content=\"\">\n");
+      out.write("        <meta name=\"author\" content=\"\">\n");
+      out.write("\n");
+      out.write("        <!-- CSS -->\n");
+      out.write("        <link href=\"assets/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
+      out.write("        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>\n");
+      out.write("        <link rel=\"stylesheet\" href=\"assets/css/reset.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"assets/css/supersized.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"assets/css/style.css\">\n");
+      out.write("  \n");
+      out.write("\n");
+      out.write("        <div class=\"page-header\" >\n");
+      out.write("            <h1><center>Report Management System</center></h1>\n");
+      out.write("        </div>\n");
+      out.write("        <div class=\"page-container\">\n");
+      out.write("            <h1>Login</h1>\n");
+      out.write("            <form name=\"loginform\" action=\"login.jsp\" method=\"post\">\n");
+      out.write("                <input type=\"text\" name=\"username\" class=\"username\" placeholder=\"Username\">\n");
+      out.write("                <br><br>\n");
+      out.write("                <select name=\"position\" style=\"color:#f0ad4e\">\n");
+      out.write("                    <option value=\"management\" style=\"color: #000000\">Management</option>\n");
+      out.write("                    <option value=\"teacher\" style=\"color: #000000\">Teacher</option>\n");
+      out.write("                    <option value=\"student\" style=\"color: #000000\">Student</option>\n");
+      out.write("                </select>\n");
+      out.write("                <input type=\"password\" name=\"password\" class=\"password\" placeholder=\"Password\">\n");
+      out.write("                <h1><button type=\"submit\">Sign me in</button></h1>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("            </form>\n");
+      out.write("        </div>\n");
+      out.write("\n");
+      out.write("        \n");
+      out.write("        <script src=\"assets/js/jquery-1.8.2.min.js\"></script>\n");
+      out.write("        <script src=\"assets/js/supersized.3.2.7.min.js\"></script>\n");
+      out.write("        <script src=\"assets/js/supersized-init.js\"></script>\n");
+      out.write("        <script src=\"assets/js/scripts.js\"></script>\n");
+      out.write("\n");
+      out.write("    \n");
       out.write("\n");
       out.write("\n");
     } catch (Throwable t) {

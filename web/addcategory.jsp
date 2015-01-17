@@ -38,14 +38,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar navbar-brand" href="#"><b>Report Management System</b></a>
+                    <a class="navbar-brand" href="#">Report Management System</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        
-                        <li><a>Welcome ${sessionScope.sessionData}</a></li>
-                        <li><a href="logoutProcess.jsp.jsp">Logout</a></li>
-                       
+                        <li><a href="#">Welcome Management</a></li>
+                        <li><a href="#">Logout</a></li>
 
                     </ul>
                     <form class="navbar-form navbar-right">
@@ -474,7 +472,7 @@
                             for (Student u : Student_bim1st.getAll()) {
                     %>
                     <tr>
-                        
+                        if(<%=u.getSubject()%>==)
                         <td><%=u.getName()%></td>
                         <td><%=u.getSubject()%></td>
                         <td><%=u.getclass()%></td>

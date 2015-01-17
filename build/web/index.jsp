@@ -32,7 +32,7 @@
         </div>
         <div class="page-container">
             <h1>Login</h1>
-            <form name="loginform" action="login.jsp" method="post">
+            <form name="loginform" action="loginProcess.jsp" method="post">
                 <input type="text" name="username" class="username" placeholder="Username">
                 <br><br>
                 <select name="position" style="color:#f0ad4e">

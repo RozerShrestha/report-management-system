@@ -1,3 +1,4 @@
+<%@page import="com.ReportManagementSystem.entities.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +41,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Welcome Teacher</a></li>
+                        <li><a href="#">Welcome ${sessionScope.sessionData}</a></li>
                         <li><a href="#">Logout</a></li>
 
                     </ul>
@@ -450,7 +451,7 @@
         <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"
              <h2 class="sub-header">High Speed Networking and communication</h2>
             <div class="table">
-                <table class="table">
+                <table class="table table-bordered">
 
                     <tr>
                         <th>Name</th>

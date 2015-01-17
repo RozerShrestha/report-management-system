@@ -6,7 +6,7 @@ import javax.servlet.jsp.*;
 import com.ReportManagementSystem.entities.Student;
 import com.ReportManagementSystem.model.Student_bim1st;
 
-public final class managmentDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class managementDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -108,13 +108,11 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                        <span class=\"icon-bar\"></span>\n");
       out.write("                        <span class=\"icon-bar\"></span>\n");
       out.write("                    </button>\n");
-      out.write("                    <a href=\"#\">Report Management System</a>\n");
+      out.write("                    <a class=\"navbar-brand\" href=\"#\">Report Management System</a>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"navbar-collapse collapse\">\n");
       out.write("                    <ul class=\"nav navbar-nav navbar-right\">\n");
-      out.write("                       <li><a href=\"#\">Welcome ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.sessionData}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</a></li>\n");
+      out.write("                        <li><a href=\"#\">Welcome Management</a></li>\n");
       out.write("                        <li><a href=\"#\">Logout</a></li>\n");
       out.write("\n");
       out.write("                    </ul>\n");
@@ -150,7 +148,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM1st\n");
       out.write("                                    </a>                                    \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM1st\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"add\">English Composition</a></li>\n");
+      out.write("                                        <li><a href=\"#\">English Composition</a></li>\n");
       out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
       out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
@@ -164,7 +162,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM2nd\n");
       out.write("                                    </a>                                   \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM2ed\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"\">English Composition</a></li>\n");
+      out.write("                                        <li><a href=\"#\">English Composition</a></li>\n");
       out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
       out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
@@ -546,7 +544,6 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
                     
       out.write("\n");
       out.write("                    <tr>\n");
-      out.write("                        \n");
       out.write("                        <td>");
       out.print(u.getName());
       out.write("</td>\n");
