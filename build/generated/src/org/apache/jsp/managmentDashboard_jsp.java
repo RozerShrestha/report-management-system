@@ -94,6 +94,23 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("        <script src=\"assets/js/ie-emulation-modes-warning.js\" type=\"text/javascript\"></script>\n");
       out.write("\n");
       out.write("        <script src=\"assets/js/ie10-viewport-bug-workaround.js\" type=\"text/javascript\"></script>\n");
+      out.write("        <script>\n");
+      out.write("            function loadToContent(str) {\n");
+      out.write("                if (str.length == 0) {\n");
+      out.write("                    document.getElementById(\"table\").innerHTML = \"\";\n");
+      out.write("                    return;\n");
+      out.write("                } else {\n");
+      out.write("                    var xmlhttp = new XMLHttpRequest();\n");
+      out.write("                    xmlhttp.onreadystatechange = function() {\n");
+      out.write("                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n");
+      out.write("                            document.getElementById(\"table\").innerHTML = xmlhttp.responseText;\n");
+      out.write("                        }\n");
+      out.write("                    }\n");
+      out.write("                    xmlhttp.open(\"GET\", \"newjsp.jsp\", true);\n");
+      out.write("                    xmlhttp.send();\n");
+      out.write("                }\n");
+      out.write("            }\n");
+      out.write("        </script>\n");
       out.write("\n");
       out.write("    </head>\n");
       out.write("\n");
@@ -108,14 +125,16 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                        <span class=\"icon-bar\"></span>\n");
       out.write("                        <span class=\"icon-bar\"></span>\n");
       out.write("                    </button>\n");
-      out.write("                    <a href=\"#\">Report Management System</a>\n");
+      out.write("                    <a class=\"navbar navbar-brand\" href=\"#\"><b>Report Management System</b></a>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"navbar-collapse collapse\">\n");
       out.write("                    <ul class=\"nav navbar-nav navbar-right\">\n");
-      out.write("                       <li><a href=\"#\">Welcome ");
+      out.write("\n");
+      out.write("                        <li><a>Welcome ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.sessionData}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</a></li>\n");
-      out.write("                        <li><a href=\"#\">Logout</a></li>\n");
+      out.write("                        <li><a href=\"index.jsp\">Logout</a></li>\n");
+      out.write("\n");
       out.write("\n");
       out.write("                    </ul>\n");
       out.write("                    <form class=\"navbar-form navbar-right\">\n");
@@ -150,7 +169,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM1st\n");
       out.write("                                    </a>                                    \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM1st\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"add\">English Composition</a></li>\n");
+      out.write("                                        <li><a  href=\"#\" onclick=\"loadToContent()\">English Composition</a></li>\n");
       out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
       out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
@@ -524,8 +543,8 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("        <div id=\"table\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n");
       out.write("\n");
       out.write("            <h2 class=\"sub-header\"></h2>\n");
-      out.write("            <div class=\"table\">\n");
-      out.write("                <!--this is  for table-->\n");
+      out.write("<!--            <div class=\"table\" >\n");
+      out.write("                this is  for table\n");
       out.write("                <table class=\"table table-bordered\">\n");
       out.write("                    <tr>\n");
       out.write("                        <th>Name</th>\n");
@@ -546,7 +565,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
                     
       out.write("\n");
       out.write("                    <tr>\n");
-      out.write("                        \n");
+      out.write("\n");
       out.write("                        <td>");
       out.print(u.getName());
       out.write("</td>\n");
@@ -591,6 +610,8 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
                     
       out.write("\n");
       out.write("                </table>\n");
+      out.write("            </div>-->\n");
+      out.write("        </div>\n");
       out.write("                <script src=\"assets/js/jquery.min.js\" type=\"text/javascript\"></script>\n");
       out.write("                <script src=\"assets/js/transition.js\" type=\"text/javascript\"></script>\n");
       out.write("                <script src=\"assets/js/collapse.js\" type=\"text/javascript\"></script>\n");

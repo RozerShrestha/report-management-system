@@ -75,7 +75,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("        <div class=\"page-container\">\n");
       out.write("            <h1>Login</h1>\n");
-      out.write("            <form name=\"loginform\" action=\"login.jsp\" method=\"post\">\n");
+      out.write("            <form name=\"loginform\" action=\"loginProcess.jsp\" method=\"post\">\n");
       out.write("                <input type=\"text\" name=\"username\" class=\"username\" placeholder=\"Username\">\n");
       out.write("                <br><br>\n");
       out.write("                <select name=\"position\" style=\"color:#f0ad4e\">\n");

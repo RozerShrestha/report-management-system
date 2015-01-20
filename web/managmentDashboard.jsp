@@ -24,6 +24,23 @@
         <script src="assets/js/ie-emulation-modes-warning.js" type="text/javascript"></script>
 
         <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
+        <script>
+            function loadToContent(str) {
+                if (str.length == 0) {
+                    document.getElementById("table").innerHTML = "";
+                    return;
+                } else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            document.getElementById("table").innerHTML = xmlhttp.responseText;
+                        }
+                    }
+                    xmlhttp.open("GET", "newjsp.jsp", true);
+                    xmlhttp.send();
+                }
+            }
+        </script>
 
     </head>
 
@@ -42,10 +59,10 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        
+
                         <li><a>Welcome ${sessionScope.sessionData}</a></li>
-                        <li><a href="logoutProcess.jsp.jsp">Logout</a></li>
-                       
+                        <li><a href="index.jsp">Logout</a></li>
+
 
                     </ul>
                     <form class="navbar-form navbar-right">
@@ -80,7 +97,7 @@
                                         BIM1st
                                     </a>                                    
                                     <ul class="panel-collapse collapse" id="collapseBIM1st" style="height: auto;">
-                                        <li><a href="add">English Composition</a></li>
+                                        <li><a  href="#" onclick="loadToContent()">English Composition</a></li>
                                         <li><a href="#">Principle of Management</a></li>
                                         <li><a href="#">Basic Mathematics</a></li>
                                         <li><a href="#">Computer Information System</a></li>
@@ -454,8 +471,8 @@
         <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
             <h2 class="sub-header"></h2>
-            <div class="table">
-                <!--this is  for table-->
+<!--            <div class="table" >
+                this is  for table
                 <table class="table table-bordered">
                     <tr>
                         <th>Name</th>
@@ -474,7 +491,7 @@
                             for (Student u : Student_bim1st.getAll()) {
                     %>
                     <tr>
-                        
+
                         <td><%=u.getName()%></td>
                         <td><%=u.getSubject()%></td>
                         <td><%=u.getclass()%></td>
@@ -497,6 +514,8 @@
                         }
                     %>
                 </table>
+            </div>-->
+        </div>
                 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
                 <script src="assets/js/transition.js" type="text/javascript"></script>
                 <script src="assets/js/collapse.js" type="text/javascript"></script>

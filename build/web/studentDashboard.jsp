@@ -41,7 +41,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">Welcome ${sessionScope.sessionData}</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="index.jsp">Logout</a></li>
 
                     </ul>
                     <form class="navbar-form navbar-right">
