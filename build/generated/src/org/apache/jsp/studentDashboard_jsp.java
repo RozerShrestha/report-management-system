@@ -86,7 +86,7 @@ public final class studentDashboard_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                        <li><a href=\"#\">Welcome ");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.sessionData}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</a></li>\n");
-      out.write("                        <li><a href=\"#\">Logout</a></li>\n");
+      out.write("                        <li><a href=\"index.jsp\">Logout</a></li>\n");
       out.write("\n");
       out.write("                    </ul>\n");
       out.write("                    <form class=\"navbar-form navbar-right\">\n");
@@ -205,11 +205,12 @@ public final class studentDashboard_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            BIM7th\n");
       out.write("                                        </a>                                   \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM7th\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"#\">English Composition</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Digital Logic</a></li>\n");
+      out.write("                                        <li><a href=\"#\">High speed Networking </a></li>\n");
+      out.write("                                        <li><a href=\"#\">Human Resource Management</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Critical thinking and decision making</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Organizational Relation</a></li>\n");
+      out.write("                                        <li><a href=\"#\">IT Entrepreneur and Supply chain management</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Management Information System</a></li>\n");
       out.write("                                    </ul>   \n");
       out.write("                                </div>\n");
       out.write("                            \n");

@@ -253,11 +253,12 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM7th\n");
       out.write("                                    </a>                                   \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM7th\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"#\">English Composition</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
-      out.write("                                        <li><a href=\"#\">Digital Logic</a></li>\n");
+      out.write("                                        <li><a href=\"#\">High speed Networking </a></li>\n");
+      out.write("                                        <li><a href=\"#\">Human Resource Management</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Critical thinking and decision making</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Organizational Relation</a></li>\n");
+      out.write("                                        <li><a href=\"#\">IT Entrepreneur and Supply chain management</a></li>\n");
+      out.write("                                        <li><a href=\"#\">Management Information System</a></li>\n");
       out.write("                                    </ul>   \n");
       out.write("                                </div>\n");
       out.write("\n");
@@ -543,13 +544,11 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("        <div id=\"table\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n");
       out.write("\n");
       out.write("            <h2 class=\"sub-header\"></h2>\n");
-      out.write("<!--            <div class=\"table\" >\n");
-      out.write("                this is  for table\n");
+      out.write("            <div class=\"table\" >\n");
+      out.write("                <h3>High speed Networking</h3>\n");
       out.write("                <table class=\"table table-bordered\">\n");
       out.write("                    <tr>\n");
       out.write("                        <th>Name</th>\n");
-      out.write("                        <th>Subject</th>\n");
-      out.write("                        <th>Class</th>\n");
       out.write("                        <th>Roll</th>\n");
       out.write("                        <th>Assignment</th>\n");
       out.write("                        <th>Report</th>\n");
@@ -568,12 +567,6 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("\n");
       out.write("                        <td>");
       out.print(u.getName());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getSubject());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getclass());
       out.write("</td>\n");
       out.write("                        <td>");
       out.print(u.getRoll());
@@ -610,7 +603,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
                     
       out.write("\n");
       out.write("                </table>\n");
-      out.write("            </div>-->\n");
+      out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("                <script src=\"assets/js/jquery.min.js\" type=\"text/javascript\"></script>\n");
       out.write("                <script src=\"assets/js/transition.js\" type=\"text/javascript\"></script>\n");

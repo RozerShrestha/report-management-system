@@ -162,11 +162,12 @@
                                             BIM7th
                                         </a>                                   
                                     <ul class="panel-collapse collapse" id="collapseBIM7th" style="height: auto;">
-                                        <li><a href="#">English Composition</a></li>
-                                        <li><a href="#">Principle of Management</a></li>
-                                        <li><a href="#">Basic Mathematics</a></li>
-                                        <li><a href="#">Computer Information System</a></li>
-                                        <li><a href="#">Digital Logic</a></li>
+                                       <li><a href="#">High speed Networking </a></li>
+                                        <li><a href="#">Human Resource Management</a></li>
+                                        <li><a href="#">Critical thinking and decision making</a></li>
+                                        <li><a href="#">Organizational Relation</a></li>
+                                        <li><a href="#">IT Entrepreneur and Supply chain management</a></li>
+                                        <li><a href="#">Management Information System</a></li>
                                     </ul>   
                                 </div>
                             

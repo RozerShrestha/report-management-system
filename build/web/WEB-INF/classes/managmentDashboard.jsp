@@ -25,15 +25,20 @@
 
         <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
         <script>
-            function loadToContent() {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+            function loadToContent(str) {
+                if (str.length == 0) {
+                    document.getElementById("table").innerHTML = "";
+                    return;
+                } else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            document.getElementById("table").innerHTML = xmlhttp.responseText;
+                        }
                     }
+                    xmlhttp.open("GET", "newjsp.jsp", true);
+                    xmlhttp.send();
                 }
-                xmlhttp.open("GET", "newjsp.jsp", true);
-                xmlhttp.send();
             }
         </script>
 
@@ -176,12 +181,11 @@
                                         BIM7th
                                     </a>                                   
                                     <ul class="panel-collapse collapse" id="collapseBIM7th" style="height: auto;">
-                                        <li><a href="#">High speed Networking </a></li>
-                                        <li><a href="#">Human Resource Management</a></li>
-                                        <li><a href="#">Critical thinking and decision making</a></li>
-                                        <li><a href="#">Organizational Relation</a></li>
-                                        <li><a href="#">IT Entrepreneur and Supply chain management</a></li>
-                                        <li><a href="#">Management Information System</a></li>
+                                        <li><a href="#">English Composition</a></li>
+                                        <li><a href="#">Principle of Management</a></li>
+                                        <li><a href="#">Basic Mathematics</a></li>
+                                        <li><a href="#">Computer Information System</a></li>
+                                        <li><a href="#">Digital Logic</a></li>
                                     </ul>   
                                 </div>
 
@@ -467,11 +471,13 @@
         <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
             <h2 class="sub-header"></h2>
-            <div class="table" >
-                <h3>High speed Networking</h3>
+<!--            <div class="table" >
+                this is  for table
                 <table class="table table-bordered">
                     <tr>
                         <th>Name</th>
+                        <th>Subject</th>
+                        <th>Class</th>
                         <th>Roll</th>
                         <th>Assignment</th>
                         <th>Report</th>
@@ -487,6 +493,8 @@
                     <tr>
 
                         <td><%=u.getName()%></td>
+                        <td><%=u.getSubject()%></td>
+                        <td><%=u.getclass()%></td>
                         <td><%=u.getRoll()%></td>
                         <td><%=u.getAssignment()%></td>
                         <td><%=u.getReport()%></td>
@@ -506,7 +514,7 @@
                         }
                     %>
                 </table>
-            </div>
+            </div>-->
         </div>
                 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
                 <script src="assets/js/transition.js" type="text/javascript"></script>
