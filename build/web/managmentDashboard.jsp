@@ -1,5 +1,5 @@
-<%@include file="header.jsp" %>
-<%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim1st"%>
+<%@include file="header.jsp"%>
+<%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim7th"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,14 +25,34 @@
 
         <script src="assets/js/ie10-viewport-bug-workaround.js" type="text/javascript"></script>
         <script>
-            function loadToContent() {
+            function loadBim7thHighSpeed() {
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                         document.getElementById("table").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xmlhttp.open("GET", "newjsp.jsp", true);
+                xmlhttp.open("GET","bim7th_management_dashboard/high_speed.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thIT_Enterpreneur() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_management_dashboard/IT_Enterpreneur.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thHRM() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_management_dashboard/HRM.jsp", true);
                 xmlhttp.send();
             }
         </script>
@@ -92,7 +112,7 @@
                                         BIM1st
                                     </a>                                    
                                     <ul class="panel-collapse collapse" id="collapseBIM1st" style="height: auto;">
-                                        <li><a  href="#" onclick="loadToContent()">English Composition</a></li>
+                                        <li><a href="#">English Composition</a></li>
                                         <li><a href="#">Principle of Management</a></li>
                                         <li><a href="#">Basic Mathematics</a></li>
                                         <li><a href="#">Computer Information System</a></li>
@@ -176,11 +196,11 @@
                                         BIM7th
                                     </a>                                   
                                     <ul class="panel-collapse collapse" id="collapseBIM7th" style="height: auto;">
-                                        <li><a href="#">High speed Networking </a></li>
-                                        <li><a href="#">Human Resource Management</a></li>
+                                        <li><a href="#" onclick="loadBim7thHighSpeed()">High speed Networking </a></li>
+                                        <li><a href="#" onclick="loadBim7thHRM()">Human Resource Management</a></li>
                                         <li><a href="#">Critical thinking and decision making</a></li>
                                         <li><a href="#">Organizational Relation</a></li>
-                                        <li><a href="#">IT Entrepreneur and Supply chain management</a></li>
+                                        <li><a href="#" onclick="loadBim7thIT_Enterpreneur()">IT Entrepreneur and Supply chain management</a></li>
                                         <li><a href="#">Management Information System</a></li>
                                     </ul>   
                                 </div>
@@ -466,47 +486,7 @@
 
         <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-            <h2 class="sub-header"></h2>
-            <div class="table" >
-                <h3>High speed Networking</h3>
-                <table class="table table-bordered">
-                    <tr>
-                        <th>Name</th>
-                        <th>Roll</th>
-                        <th>Assignment</th>
-                        <th>Report</th>
-                        <th>Midterm</th>
-                        <th>Presentation</th>
-                        <th>Preboard</th>
-                        <th>Total</th>
-                    </tr>
-                    <%
-                        try {
-                            for (Student u : Student_bim1st.getAll()) {
-                    %>
-                    <tr>
-
-                        <td><%=u.getName()%></td>
-                        <td><%=u.getRoll()%></td>
-                        <td><%=u.getAssignment()%></td>
-                        <td><%=u.getReport()%></td>
-                        <td><%=u.getMidterm()%></td>
-                        <td><%=u.getPresentation()%></td>
-                        <td><%=u.getPreboard()%></td>
-                        <td><%=u.getTotal()%></td>
-
-
-                    </tr> 
-
-
-                    <%
-                            }
-                        } catch (Exception ex) {
-                            out.println(ex.getMessage());
-                        }
-                    %>
-                </table>
-            </div>
+            
         </div>
                 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
                 <script src="assets/js/transition.js" type="text/javascript"></script>

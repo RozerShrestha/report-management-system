@@ -46,16 +46,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("\n");
-      out.write("\n");
       out.write("        <meta charset=\"utf-8\">\n");
       out.write("        <title>Fullscreen Login</title>\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("        <meta name=\"description\" content=\"\">\n");
       out.write("        <meta name=\"author\" content=\"\">\n");
       out.write("\n");
-      out.write("        <!-- CSS -->\n");
       out.write("        <link href=\"assets/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
       out.write("        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>\n");
       out.write("        <link rel=\"stylesheet\" href=\"assets/css/reset.css\">\n");

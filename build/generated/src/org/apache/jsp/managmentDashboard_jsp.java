@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import com.ReportManagementSystem.entities.Student;
-import com.ReportManagementSystem.model.Student_bim1st;
+import com.ReportManagementSystem.model.Student_bim7th;
 
 public final class managmentDashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -95,20 +95,35 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("\n");
       out.write("        <script src=\"assets/js/ie10-viewport-bug-workaround.js\" type=\"text/javascript\"></script>\n");
       out.write("        <script>\n");
-      out.write("            function loadToContent(str) {\n");
-      out.write("                if (str.length == 0) {\n");
-      out.write("                    document.getElementById(\"table\").innerHTML = \"\";\n");
-      out.write("                    return;\n");
-      out.write("                } else {\n");
-      out.write("                    var xmlhttp = new XMLHttpRequest();\n");
-      out.write("                    xmlhttp.onreadystatechange = function() {\n");
-      out.write("                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n");
-      out.write("                            document.getElementById(\"table\").innerHTML = xmlhttp.responseText;\n");
-      out.write("                        }\n");
+      out.write("            function loadBim7thHighSpeed() {\n");
+      out.write("                var xmlhttp = new XMLHttpRequest();\n");
+      out.write("                xmlhttp.onreadystatechange = function() {\n");
+      out.write("                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n");
+      out.write("                        document.getElementById(\"table\").innerHTML = xmlhttp.responseText;\n");
       out.write("                    }\n");
-      out.write("                    xmlhttp.open(\"GET\", \"newjsp.jsp\", true);\n");
-      out.write("                    xmlhttp.send();\n");
       out.write("                }\n");
+      out.write("                xmlhttp.open(\"GET\",\"bim7th_management_dashboard/high_speed.jsp\", true);\n");
+      out.write("                xmlhttp.send();\n");
+      out.write("            }\n");
+      out.write("            function loadBim7thIT_Enterpreneur() {\n");
+      out.write("                var xmlhttp = new XMLHttpRequest();\n");
+      out.write("                xmlhttp.onreadystatechange = function() {\n");
+      out.write("                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n");
+      out.write("                        document.getElementById(\"table\").innerHTML = xmlhttp.responseText;\n");
+      out.write("                    }\n");
+      out.write("                }\n");
+      out.write("                xmlhttp.open(\"GET\",\"bim7th_management_dashboard/IT_Enterpreneur.jsp\", true);\n");
+      out.write("                xmlhttp.send();\n");
+      out.write("            }\n");
+      out.write("            function loadBim7thHRM() {\n");
+      out.write("                var xmlhttp = new XMLHttpRequest();\n");
+      out.write("                xmlhttp.onreadystatechange = function() {\n");
+      out.write("                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {\n");
+      out.write("                        document.getElementById(\"table\").innerHTML = xmlhttp.responseText;\n");
+      out.write("                    }\n");
+      out.write("                }\n");
+      out.write("                xmlhttp.open(\"GET\",\"bim7th_management_dashboard/HRM.jsp\", true);\n");
+      out.write("                xmlhttp.send();\n");
       out.write("            }\n");
       out.write("        </script>\n");
       out.write("\n");
@@ -169,7 +184,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM1st\n");
       out.write("                                    </a>                                    \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM1st\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a  href=\"#\" onclick=\"loadToContent()\">English Composition</a></li>\n");
+      out.write("                                        <li><a href=\"#\">English Composition</a></li>\n");
       out.write("                                        <li><a href=\"#\">Principle of Management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Basic Mathematics</a></li>\n");
       out.write("                                        <li><a href=\"#\">Computer Information System</a></li>\n");
@@ -253,11 +268,11 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("                                        BIM7th\n");
       out.write("                                    </a>                                   \n");
       out.write("                                    <ul class=\"panel-collapse collapse\" id=\"collapseBIM7th\" style=\"height: auto;\">\n");
-      out.write("                                        <li><a href=\"#\">High speed Networking </a></li>\n");
-      out.write("                                        <li><a href=\"#\">Human Resource Management</a></li>\n");
+      out.write("                                        <li><a href=\"#\" onclick=\"loadBim7thHighSpeed()\">High speed Networking </a></li>\n");
+      out.write("                                        <li><a href=\"#\" onclick=\"loadBim7thHRM()\">Human Resource Management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Critical thinking and decision making</a></li>\n");
       out.write("                                        <li><a href=\"#\">Organizational Relation</a></li>\n");
-      out.write("                                        <li><a href=\"#\">IT Entrepreneur and Supply chain management</a></li>\n");
+      out.write("                                        <li><a href=\"#\" onclick=\"loadBim7thIT_Enterpreneur()\">IT Entrepreneur and Supply chain management</a></li>\n");
       out.write("                                        <li><a href=\"#\">Management Information System</a></li>\n");
       out.write("                                    </ul>   \n");
       out.write("                                </div>\n");
@@ -543,67 +558,7 @@ public final class managmentDashboard_jsp extends org.apache.jasper.runtime.Http
       out.write("\n");
       out.write("        <div id=\"table\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n");
       out.write("\n");
-      out.write("            <h2 class=\"sub-header\"></h2>\n");
-      out.write("            <div class=\"table\" >\n");
-      out.write("                <h3>High speed Networking</h3>\n");
-      out.write("                <table class=\"table table-bordered\">\n");
-      out.write("                    <tr>\n");
-      out.write("                        <th>Name</th>\n");
-      out.write("                        <th>Roll</th>\n");
-      out.write("                        <th>Assignment</th>\n");
-      out.write("                        <th>Report</th>\n");
-      out.write("                        <th>Midterm</th>\n");
-      out.write("                        <th>Presentation</th>\n");
-      out.write("                        <th>Preboard</th>\n");
-      out.write("                        <th>Total</th>\n");
-      out.write("                    </tr>\n");
-      out.write("                    ");
-
-                        try {
-                            for (Student u : Student_bim1st.getAll()) {
-                    
-      out.write("\n");
-      out.write("                    <tr>\n");
-      out.write("\n");
-      out.write("                        <td>");
-      out.print(u.getName());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getRoll());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getAssignment());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getReport());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getMidterm());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getPresentation());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getPreboard());
-      out.write("</td>\n");
-      out.write("                        <td>");
-      out.print(u.getTotal());
-      out.write("</td>\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("                    </tr> \n");
-      out.write("\n");
-      out.write("\n");
-      out.write("                    ");
-
-                            }
-                        } catch (Exception ex) {
-                            out.println(ex.getMessage());
-                        }
-                    
-      out.write("\n");
-      out.write("                </table>\n");
-      out.write("            </div>\n");
+      out.write("            \n");
       out.write("        </div>\n");
       out.write("                <script src=\"assets/js/jquery.min.js\" type=\"text/javascript\"></script>\n");
       out.write("                <script src=\"assets/js/transition.js\" type=\"text/javascript\"></script>\n");

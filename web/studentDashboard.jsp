@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico"
+        <link rel="icon" href="../../favicon.ico"/>
 
 
 
@@ -448,7 +448,7 @@
 
 
 
-        <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"
+        <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
              <h2 class="sub-header">High Speed Networking and communication</h2>
             <div class="table">
                 <table class="table">

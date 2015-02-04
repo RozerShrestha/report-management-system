@@ -1,28 +1,27 @@
 <%@page import="com.ReportManagementSystem.entities.Student"%>
-<%@page import="com.ReportManagementSystem.model.Student_bim1st" %>
+<%@page import="com.ReportManagementSystem.model.Student_bim7th"%>
 <%@page import="java.sql.Date"%>
 
 <%
-Student s=new Student();
-s.setName(request.getParameter("name"));
-s.setSubject(request.getParameter("subject"));
-s.setClass(request.getParameter("class"));
-s.setRoll(Integer.parseInt(request.getParameter("roll")));
-s.setAssignment(Integer.parseInt(request.getParameter("assignment")));
-s.setReport(Integer.parseInt(request.getParameter("report")));
-s.setMidterm(Integer.parseInt(request.getParameter("midterm")));
-s.setPresentation(Integer.parseInt(request.getParameter("presentation")));
-s.setPreboard(Integer.parseInt(request.getParameter("preboard")));
-s.setTotal(Integer.parseInt(request.getParameter("total")));
-//if(request.getParameter("userid")!="")
-//{
-//Student_bim1st.insert(s);
-//}
-//else
-//{
-//   int userid=Integer.parseInt(request.getParameter("userid"));
-//   s.setId(Id);
-//   Student_bim1st.insert(s);
-//}
-Student_bim1st.insert(s);
+    Student u = new Student();
+    u.setName(request.getParameter("studentname"));
+    u.setRoll(Integer.parseInt(request.getParameter("roll")));
+    u.setSubject(request.getParameter("subject"));
+    u.setClass(request.getParameter("class"));
+    u.setAssignment(Integer.parseInt(request.getParameter("assignment")));
+    u.setReport(Integer.parseInt(request.getParameter("report")));
+    u.setMidterm(Integer.parseInt(request.getParameter("midterm")));
+    u.setPresentation(Integer.parseInt(request.getParameter("presentation")));
+    u.setPreboard(Integer.parseInt(request.getParameter("preboard")));
+    u.setTotal(Integer.parseInt(request.getParameter("total")));
+    
+    Date d = new Date(System.currentTimeMillis());
+    if (request.getParameter("userid")!= "") {
+        Student_bim7th.insert(u);
+    } else {
+        int userid = Integer.parseInt(request.getParameter("userid"));
+        u.setId(userid);
+        Student_bim7th.Update(u);
+    }
+//    response.sendRedirect("users.jsp");
 %>

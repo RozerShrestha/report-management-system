@@ -52,7 +52,7 @@ public final class studentDashboard_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
       out.write("        <meta name=\"description\" content=\"\">\n");
       out.write("        <meta name=\"author\" content=\"\">\n");
-      out.write("        <link rel=\"icon\" href=\"../../favicon.ico\"\n");
+      out.write("        <link rel=\"icon\" href=\"../../favicon.ico\"/>\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -493,7 +493,7 @@ public final class studentDashboard_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("        <div id=\"table\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\"\n");
+      out.write("        <div id=\"table\" class=\"col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main\">\n");
       out.write("             <h2 class=\"sub-header\">High Speed Networking and communication</h2>\n");
       out.write("            <div class=\"table\">\n");
       out.write("                <table class=\"table\">\n");
