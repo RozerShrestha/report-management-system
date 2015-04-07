@@ -5,7 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim7th"%>
-<h2>High speed Networking</h2>   
+<h2>Organizational Relations</h2>   
 <div class="pull-right">
     <p>
         <a href="#" onclick="loadRecords()" class="btn btn-primary">Add Records</a>
@@ -25,7 +25,7 @@
     </tr>
     <%
         try {
-            for (Student u : Student_bim7th.getHIghSpeed()) {
+            for (Student u : Student_bim7th.getOR()) {
     %>
     <tr>
 
@@ -38,8 +38,8 @@
         <td><%=u.getPreboard()%></td>
         <td><%=u.getTotal()%></td>
         <td>
-                    <a href="edituser.jsp?id=<%=u.getId()%>" class="btn btn-success">Edit</a>
-                    <a href="deleteuser.jsp?id=<%=u.getId()%>" class="btn btn-danger" onclick="return confirm('Are you sure to Delete?')">Delete</a>
+                    <a href="editRecords.jsp?id=<%=u.getId()%>" class="btn btn-success">Edit</a>
+                    <a href="deleteRecords.jsp?id=<%=u.getId()%>" class="btn btn-danger" onclick="return confirm('Are you sure to Delete?')">Delete</a>
                     
                 </td>
         

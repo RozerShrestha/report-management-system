@@ -1,5 +1,5 @@
 <%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim7th"%>
-<h2>High speed Networking</h2>                
+<h2>Organizational Relation</h2>                
 <table  class="table table-bordered table-striped">
                     <tr>
                         <th>Name</th>
@@ -13,7 +13,7 @@
                     </tr>
                     <%
                         try {
-                            for (Student u : Student_bim7th.getHRM()) {
+                            for (Student u : Student_bim7th.getOR()) {
                     %>
                     <tr>
 
@@ -37,4 +37,3 @@
                         }
                     %>
                 </table>
-                

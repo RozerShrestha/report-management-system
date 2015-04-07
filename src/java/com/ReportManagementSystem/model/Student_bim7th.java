@@ -23,7 +23,7 @@ public class Student_bim7th {
     {
         DBConnection connection=new DBConnection();//DBConnection class ko object banako
         connection.open();
-        String sql="INSERT INTO student_bim1st(name,roll,subject,class,assignment,report,midterm,presentation,preboard,total) VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String sql="INSERT INTO student_bim7th(name,roll,subject,class,assignment,report,midterm,presentation,preboard,total) VALUES(?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement= connection.initStatement(sql);
        
         statement.setString(1,students.getName());
@@ -47,7 +47,7 @@ public class Student_bim7th {
     {
         DBConnection connection=new DBConnection();
         connection.open();
-        String sql="Update student_bim1st set name=?,subject=?,class=?,roll=?,assignment=?,report=?, midterm=?, presentation=?, preboard=?, total=? WHERE id=?";
+        String sql="Update student_bim7th set name=?,subject=?,class=?,roll=?,assignment=?,report=?, midterm=?, presentation=?, preboard=?, total=? WHERE id=?";
         System.out.println(students.toString());
         PreparedStatement statement= connection.initStatement(sql);
        
@@ -73,7 +73,7 @@ public class Student_bim7th {
         {
         DBConnection connection=new DBConnection();
         connection.open();
-        String sql="DELETE FROM student_bim1st WHERE id=?";
+        String sql="DELETE FROM student_bim7th WHERE id=?";
         PreparedStatement statement= connection.initStatement(sql);
         statement.setString(1,id.toString());
 
@@ -88,7 +88,7 @@ public class Student_bim7th {
         DBConnection connection=new DBConnection();
         connection.open();
         ArrayList<Student> students=new ArrayList<Student>();
-        String sql="SELECT * from student_bim1st WHERE subject='IT_Enterpreneur'";
+        String sql="SELECT * from student_bim7th WHERE subject='IT Enterpreneur'";
         PreparedStatement statement= connection.initStatement(sql);
         ResultSet rs=connection.executeQuery();
        while(rs.next()){
@@ -113,7 +113,7 @@ public class Student_bim7th {
         DBConnection connection=new DBConnection();
         connection.open();
         ArrayList<Student> students=new ArrayList<Student>();
-        String sql="SELECT * from student_bim1st WHERE subject='High Speed and Multimedia Networking'";
+        String sql="SELECT * from student_bim7th WHERE subject='High Speed and Multimedia Networking'";
         PreparedStatement statement= connection.initStatement(sql);
         ResultSet rs=connection.executeQuery();
        while(rs.next()){
@@ -138,7 +138,7 @@ public class Student_bim7th {
         DBConnection connection=new DBConnection();
         connection.open();
         ArrayList<Student> students=new ArrayList<Student>();
-        String sql="SELECT * from student_bim1st WHERE subject='HRM'";
+        String sql="SELECT * from student_bim7th WHERE subject='human resource management'";
         PreparedStatement statement= connection.initStatement(sql);
         ResultSet rs=connection.executeQuery();
        while(rs.next()){
@@ -159,11 +159,88 @@ public class Student_bim7th {
         return students;
     }
     
+    public static ArrayList<Student> getMIS() throws ClassNotFoundException, SQLException
+    {
+        DBConnection connection=new DBConnection();
+        connection.open();
+        ArrayList<Student> students=new ArrayList<Student>();
+        String sql="SELECT * from student_bim7th WHERE subject='management information system'";
+        PreparedStatement statement= connection.initStatement(sql);
+        ResultSet rs=connection.executeQuery();
+       while(rs.next()){
+            Student s=new Student();
+            s.setName(rs.getString("name"));
+            s.setSubject(rs.getString("subject"));
+            s.setClass(rs.getString("class"));
+            s.setRoll(Integer.parseInt(rs.getString("roll")));
+            s.setAssignment(Integer.parseInt(rs.getString("assignment")));
+            s.setReport(Integer.parseInt(rs.getString("report")));
+           s.setMidterm(Integer.parseInt(rs.getString("midterm")));
+           s.setPresentation(Integer.parseInt(rs.getString("presentation")));
+           s.setPreboard(Integer.parseInt(rs.getString("preboard")));
+           s.setTotal(Integer.parseInt(rs.getString("total")));
+          students.add(s);   
+        }
+        connection.close();                
+        return students;
+    }
+    
+    public static ArrayList<Student> getOR() throws ClassNotFoundException, SQLException
+    {
+        DBConnection connection=new DBConnection();
+        connection.open();
+        ArrayList<Student> students=new ArrayList<Student>();
+        String sql="SELECT * from student_bim7th WHERE subject='organization relation'";
+        PreparedStatement statement= connection.initStatement(sql);
+        ResultSet rs=connection.executeQuery();
+       while(rs.next()){
+            Student s=new Student();
+            s.setName(rs.getString("name"));
+            s.setSubject(rs.getString("subject"));
+            s.setClass(rs.getString("class"));
+            s.setRoll(Integer.parseInt(rs.getString("roll")));
+            s.setAssignment(Integer.parseInt(rs.getString("assignment")));
+            s.setReport(Integer.parseInt(rs.getString("report")));
+           s.setMidterm(Integer.parseInt(rs.getString("midterm")));
+           s.setPresentation(Integer.parseInt(rs.getString("presentation")));
+           s.setPreboard(Integer.parseInt(rs.getString("preboard")));
+           s.setTotal(Integer.parseInt(rs.getString("total")));
+          students.add(s);   
+        }
+        connection.close();                
+        return students;
+    }
+    
+    public static ArrayList<Student> getCTDM() throws ClassNotFoundException, SQLException
+    {
+        DBConnection connection=new DBConnection();
+        connection.open();
+        ArrayList<Student> students=new ArrayList<Student>();
+        String sql="SELECT * from student_bim7th WHERE subject='critical thinking and decision making'";
+        PreparedStatement statement= connection.initStatement(sql);
+        ResultSet rs=connection.executeQuery();
+       while(rs.next()){
+            Student s=new Student();
+            s.setName(rs.getString("name"));
+            s.setSubject(rs.getString("subject"));
+            s.setClass(rs.getString("class"));
+            s.setRoll(Integer.parseInt(rs.getString("roll")));
+            s.setAssignment(Integer.parseInt(rs.getString("assignment")));
+            s.setReport(Integer.parseInt(rs.getString("report")));
+           s.setMidterm(Integer.parseInt(rs.getString("midterm")));
+           s.setPresentation(Integer.parseInt(rs.getString("presentation")));
+           s.setPreboard(Integer.parseInt(rs.getString("preboard")));
+           s.setTotal(Integer.parseInt(rs.getString("total")));
+          students.add(s);   
+        }
+        connection.close();                
+        return students;
+    }
     public static Student getByPk(int id) throws ClassNotFoundException, SQLException{
         DBConnection connection=new DBConnection();
         connection.open();
         Student students=null;
-        String sql="SELECT * from student_bim1st where students_id=?";
+        String sql="SELECT * from student_bim7th where students_id=?";
         PreparedStatement statement= connection.initStatement(sql);
         statement.setInt(1, id);
         ResultSet rs=connection.executeQuery();

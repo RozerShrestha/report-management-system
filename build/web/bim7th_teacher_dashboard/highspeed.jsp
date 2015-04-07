@@ -3,13 +3,12 @@
     Created on : Feb 4, 2015, 12:13:31 AM
     Author     : Rozer
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim7th"%>
 <h2>High speed Networking</h2>   
 <div class="pull-right">
     <p>
-        <a href="adduser.jsp" class="btn btn-primary">Add User</a>
+        <a href="#" onclick="loadRecords()" class="btn btn-primary">Add Records</a>
     </p>
 </div>
 <table  class="table table-bordered table-striped">
@@ -22,6 +21,7 @@
         <th>Presentation</th>
         <th>Preboard</th>
         <th>Total</th>
+        <th>operation</th>
     </tr>
     <%
         try {
@@ -38,10 +38,11 @@
         <td><%=u.getPreboard()%></td>
         <td><%=u.getTotal()%></td>
         <td>
-            <a href="edituser.jsp?id=<%=u.getId%>" class="btn btn-success">Edit</a>
-            <a href="deleteuser.jsp?id=<%=u.getId()%>" class="btn btn-danger" onclick="return confirm('Are you sure to Delete?')">Delete</a>
-
-        </td>
+                    <a href="edituser.jsp?id=<%=u.getId()%>" class="btn btn-success">Edit</a>
+                    <a href="deleteuser.jsp?id=<%=u.getId()%>" class="btn btn-danger" onclick="return confirm('Are you sure to Delete?')">Delete</a>
+                    
+                </td>
+        
     </tr> 
 
 </tr> 

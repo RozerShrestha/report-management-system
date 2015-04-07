@@ -20,22 +20,72 @@
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
                     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xmlhttp.open("GET","bim7th/high_speed.jsp", true);
+                xmlhttp.open("GET","bim7th_teacher_dashboard/highspeed.jsp", true);
                 xmlhttp.send();
             }
-//            function loadBim7thIT_Enterpreneur() {
-//                var xmlhttp = new XMLHttpRequest();
-//                xmlhttp.onreadystatechange = function() {
-//                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-//                        document.getElementById("table").innerHTML = xmlhttp.responseText;
-//                    }
-//                }
-//                xmlhttp.open("GET","bim7th/IT_Enterpreneur.jsp", true);
-//                xmlhttp.send();
-//            }
+            function loadBim7thMIS() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_teacher_dashboard/mis.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thCTDM() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_teacher_dashboard/ctdm.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thOR() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_teacher_dashboard/or.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thIT_Enterpreneur() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_teacher_dashboard/IT_Enterpreneur.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thHRM() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","bim7th_teacher_dashboard/hrm.jsp", true);
+                xmlhttp.send();
+            }
+            function loadRecords() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("inner_table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","addRecords.jsp", true);
+                xmlhttp.send();
+            }
 //            function loadBim7thHRM() {
 //                var xmlhttp = new XMLHttpRequest();
 //                xmlhttp.onreadystatechange = function() {
@@ -185,12 +235,12 @@
                                         BIM7th
                                     </a>                                   
                                     <ul class="panel-collapse collapse" id="collapseBIM7th" style="height: auto;">
-                                        <li><a href="#" onclick="">High speed Networking </a></li>
-                                        <li><a href="#">Human Resource Management</a></li>
-                                        <li><a href="#">Critical thinking and decision making</a></li>
-                                        <li><a href="#">Organizational Relation</a></li>
-                                        <li><a href="#">IT Entrepreneur and Supply chain management</a></li>
-                                        <li><a href="#">Management Information System</a></li>
+                                        <li><a href="#" onclick="loadBim7thHighSpeed()">High speed Networking </a></li>
+                                        <li><a href="#" onclick="loadBim7thHRM()()">Human Resource Management</a></li>
+                                        <li><a href="#" onclick="loadBim7thCTDM()">Critical thinking and decision making</a></li>
+                                        <li><a href="#" onclick="loadBim7thOR()">Organizational Relation</a></li>
+                                        <li><a href="#" onclick="loadBim7thIT_Enterpreneur()">IT Entrepreneur and Supply chain management</a></li>
+                                        <li><a href="#" onclick="loadBim7thMIS()">Management Information System</a></li>
                                     </ul>   
                                 </div>
 
@@ -474,23 +524,10 @@
 
 
         <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-             <div>
-               
-                <h1>High Speed and Multimedia Networking </h1>
-                <form role="form" action="saveuser.jsp" method="post">            
-                    <input type="text" class="form-control" name="studentname" placeholder="Enter Name of the student">            
-                    <input type="text" class="form-control" name="roll" placeholder="Enter roll">
-                    <input type="text" class="form-control" name="subject" placeholder="Enter subject">
-                    <input type="text" class="form-control" name="class" placeholder="Enter class">
-                    <input type="text" class="form-control" name="assignment" placeholder="Enter marks secured in assignment">
-                    <input type="text" class="form-control" name="report" placeholder="Enter marks secured in report">
-                    <input type="text" class="form-control" name="midterm" placeholder="Enter marks secured in midterm">
-                    <input type="text" class="form-control" name="presentation" placeholder="Enter presentation">
-                    <input type="text" class="form-control" name="preboard" placeholder="Enter preboard">
-                    <input type="text" class="form-control" name="total" placeholder="Enter total">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>     
-             </div>
+            <div id="inner_table">
+                
+            </div>
+            
             </div>                  
 
 

@@ -5,7 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="com.ReportManagementSystem.entities.Student,com.ReportManagementSystem.model.Student_bim7th"%>
-<h2>High speed Networking</h2>   
+<h2>Management Information System</h2>   
 <div class="pull-right">
     <p>
         <a href="#" onclick="loadRecords()" class="btn btn-primary">Add Records</a>
@@ -25,7 +25,7 @@
     </tr>
     <%
         try {
-            for (Student u : Student_bim7th.getHIghSpeed()) {
+            for (Student u : Student_bim7th.getMIS()) {
     %>
     <tr>
 

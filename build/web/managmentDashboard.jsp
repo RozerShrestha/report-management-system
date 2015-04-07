@@ -32,7 +32,7 @@
                         document.getElementById("table").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xmlhttp.open("GET","bim7th_management_dashboard/high_speed.jsp", true);
+                xmlhttp.open("GET", "bim7th_management_dashboard/high_speed.jsp", true);
                 xmlhttp.send();
             }
             function loadBim7thIT_Enterpreneur() {
@@ -42,7 +42,7 @@
                         document.getElementById("table").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xmlhttp.open("GET","bim7th_management_dashboard/IT_Enterpreneur.jsp", true);
+                xmlhttp.open("GET", "bim7th_management_dashboard/IT_Enterpreneur.jsp", true);
                 xmlhttp.send();
             }
             function loadBim7thHRM() {
@@ -52,7 +52,37 @@
                         document.getElementById("table").innerHTML = xmlhttp.responseText;
                     }
                 }
-                xmlhttp.open("GET","bim7th_management_dashboard/HRM.jsp", true);
+                xmlhttp.open("GET", "bim7th_management_dashboard/HRM.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thOR() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "bim7th_management_dashboard/OR.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thCTDM() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "bim7th_management_dashboard/CTDM.jsp", true);
+                xmlhttp.send();
+            }
+            function loadBim7thMIS() {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("table").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET", "bim7th_management_dashboard/MIS.jsp", true);
                 xmlhttp.send();
             }
         </script>
@@ -198,10 +228,10 @@
                                     <ul class="panel-collapse collapse" id="collapseBIM7th" style="height: auto;">
                                         <li><a href="#" onclick="loadBim7thHighSpeed()">High speed Networking </a></li>
                                         <li><a href="#" onclick="loadBim7thHRM()">Human Resource Management</a></li>
-                                        <li><a href="#">Critical thinking and decision making</a></li>
-                                        <li><a href="#">Organizational Relation</a></li>
+                                        <li><a href="#" onclick="loadBim7thCTDM()">Critical thinking and decision making</a></li>
+                                        <li><a href="#" onclick="loadBim7thOR()">Organizational Relation</a></li>
                                         <li><a href="#" onclick="loadBim7thIT_Enterpreneur()">IT Entrepreneur and Supply chain management</a></li>
-                                        <li><a href="#">Management Information System</a></li>
+                                        <li><a href="#" onclick="loadBim7thMIS()">Management Information System</a></li>
                                     </ul>   
                                 </div>
 
@@ -484,14 +514,18 @@
 
 
 
-        <div id="table" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div id="table1" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div id="table">
 
-            
+            </div>
+            <div class="pull-right">
+                <a href="javascript:window.print()"><img src="assets/img/print.jpg" width="40px" height="40px" alt="print this page" id="print-button" /></a>
+            </div>
         </div>
-                <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-                <script src="assets/js/transition.js" type="text/javascript"></script>
-                <script src="assets/js/collapse.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/js/transition.js" type="text/javascript"></script>
+        <script src="assets/js/collapse.js" type="text/javascript"></script>
 
 
-                </body>
-                </html>
+    </body>
+</html>
